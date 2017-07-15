@@ -1,5 +1,14 @@
 angular.module('video-player')
 
 .component('search', {
-  // TODO
+  bindings: {
+    onsearch: '<',
+    result: '<',
+    click: '<'
+  },
+  templateUrl: 'src/templates/search.html'
+})
+
+.controller('searchCtrl', function() {
+  this.inputVal = '';
 });
